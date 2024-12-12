@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: maroon;
+    padding: 20px;
+    color: white;
+}
+
+.employeeInfo {
+    flex: 1;
+}
+
+.reports {
+    display: flex;
+    gap: 10px;
+}
+
+.reportButton,
+.cashOutButton {
+    padding: 10px 15px;
+    background-color: #fff;
+    color: maroon;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effects for report buttons */
+.reportButton:hover {
+    background-color: rgb(140, 39, 39);
+    color: #fff;
+}
+
+/* Hover effects for cash out buttons */
+.cashOutButton:hover {
+    background-color: maroon; 
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #f1f1f1;
+    gap: 20px;
+}
+
+.menuGridContainer > :first-child {
+    flex: 2; 
+}
+
+.menuGridContainer > :last-child {
+    flex: 1;
+}
+
+.orderSummary {
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.orders {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cashOutButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gridContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: maroon;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.header h2 {
+    margin-bottom: 10px;
+}
+
+.menuTypeTitle {
+    font-size: 24px;
+    margin: 16px 0; 
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -1,0 +1,210 @@
+/* EmployeeInfo.module.css - styling for EmployeeInfoModal.js */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 1000; 
+}
+
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 200px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.modalHeader {
+    background-color: #800000;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #800000;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    flex-shrink: 0;
+    position: relative;
+    
+}
+
+.employeeTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.employeeTable th,
+.employeeTable td {
+    padding: 12px;
+    text-align: left;
+    border-right: 1px solid #ccc;
+    color: black;
+}
+
+.employeeTable th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.employeeTable td {
+    background-color: #fff;
+}
+
+.employeeTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.employeeTable td:last-child,
+.employeeTable th:last-child {
+    border-right: none;
+}
+
+.buttonGroup button {
+    padding: 8px 16px;
+    margin: 0px 10px;
+    border: 2px solid #ac0808;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ac0808;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.buttonGroup button:hover {
+    background-color: #9b1c1c;
+    border-color: #9b1c1c;
+    color: white;
+}
+
+.buttonGroup button:active {
+    background-color: #660000;
+    border-color: #660000;
+    color: white;
+}
+
+.buttonGroup button:focus {
+    outline: none;
+}
+
+.addEmployeeModal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 1002;
+}
+
+.addEmployeeModal .modalContent {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    max-height: 90vh;
+    overflow-y: auto;
+    
+}
+
+.addEmployeeModal h2 {
+    font-size: 1.5rem;
+    color: #800000;
+    margin-bottom: 20px;
+}
+
+.addEmployeeModal .formGroup {
+    margin-bottom: 15px;
+    color: black;
+}
+
+.addEmployeeModal label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.addEmployeeModal input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.addEmployeeModal .modalActions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.addEmployeeModal .btnCancel,
+.addEmployeeModal .btnConfirm {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.addEmployeeModal .btnCancel {
+    background-color: #f44336;
+    border: none;
+    color: white;
+}
+
+.addEmployeeModal .btnCancel:hover {
+    background-color: #d32f2f;
+}
+
+.addEmployeeModal .btnConfirm {
+    background-color: #f44336;
+    border: none;
+    color: white;
+}
+
+.addEmployeeModal .btnConfirm:hover {
+    background-color: #d32f2f;
+}

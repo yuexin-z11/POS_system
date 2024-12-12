@@ -1,0 +1,62 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: maroon; /* Change background color to maroon */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other content */
+    color: white; /* Default text color for the popup */
+}
+
+.selectedItem {
+    font-weight: bold; /* Make the selected item text bold */
+    color: white; /* Ensure the selected item text is white */
+    margin-bottom: 15px; /* Space below the selected item text */
+}
+
+.sizeButtons {
+    display: flex; /* Use flexbox to align buttons in a row */
+    justify-content: space-around; /* Space between buttons */
+    margin-bottom: 15px; /* Space below the buttons */
+}
+
+.sizeButton {
+    background-color: white; /* White background for size buttons */
+    border: 1px solid maroon; /* Border color */
+    color: maroon; /* Text color */
+    padding: 10px 15px; /* Padding for buttons */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.sizeButton:hover {
+    background-color: rgb(188, 10, 10); /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.closeButtonContainer {
+    display: flex; /* Flexbox for centering the close button */
+    justify-content: center; /* Center the close button */
+}
+
+.closeButton {
+    background-color: white; /* White background for the close button */
+    border: 1px solid maroon; /* Border color */
+    color: maroon; /* Text color */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.closeButton:hover {
+    background-color: maroon; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.h4 {
+    font-weight: lighter;
+    align-items: center;
+}

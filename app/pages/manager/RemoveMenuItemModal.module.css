@@ -1,0 +1,63 @@
+/* 
+   - Full-screen overlay that dims the background and centers the modal content.
+   - Positioned as fixed to cover the entire screen.
+   - Uses flexbox to center the modal in the viewport. */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  /*
+   - The main container for the modal content.
+   - Has padding, white background, rounded corners, and text centered.
+   - Fixed width to 300px and adjusts text color to black. */
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    color: black;
+  }
+  /* 
+   - Style for the input field where the user enters the menu item name.
+   - Full-width input with padding and border radius for a clean look. */
+  .inputField {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+  }
+  /*
+  - Common button style for actions like Remove Item and Cancel.
+  - Styled with padding, margin, background color, white text, and rounded corners. */
+  .button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  /*   - Darkens the button background when the user hovers over it for better interaction feedback. */
+  .button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /*Style for displaying error messages in red color and smaller font size. */
+
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  

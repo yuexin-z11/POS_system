@@ -1,0 +1,62 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: maroon; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    color: white; 
+}
+
+.selectedItem {
+    font-weight: bold; 
+    color: white; 
+    margin-bottom: 15px; 
+}
+
+.sizeButtons {
+    display: flex; 
+    justify-content: space-around; 
+    margin-bottom: 15px; 
+}
+
+.sizeButton {
+    background-color: white; 
+    border: 1px solid maroon; 
+    color: maroon; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.sizeButton:hover {
+    background-color: rgb(188, 10, 10); 
+    color: white; 
+}
+
+.closeButtonContainer {
+    display: flex; 
+    justify-content: center; 
+}
+
+.closeButton {
+    background-color: white; 
+    border: 1px solid maroon; 
+    color: maroon; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.closeButton:hover {
+    background-color: maroon; 
+    color: white; 
+}
+
+.h4 {
+    font-weight: lighter;
+    align-items: center;
+}

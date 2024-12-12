@@ -1,0 +1,119 @@
+/* Modal overlay to dim the background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ensures modal is on top of everything */
+}
+
+/* Modal container */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+    z-index: 1000; /* Ensures modal is on top of the overlay */
+}
+
+/* Title of the modal */
+.modal h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+
+/* Error message */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Description text */
+.modal p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+
+/* List of users (buttons for linking accounts) */
+.modal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Individual user button */
+.modal ul li {
+    margin: 0 0;
+}
+
+.modal ul li button {
+    width: 100%;
+    padding: 10px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.modal ul li button:hover {
+    background-color: #c44444;
+}
+
+/* Link Account button */
+.modal button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.modal button:hover:not(:disabled) {
+    background-color: #c44444;
+}
+
+/* Close button for modal */
+.modal button.close {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+.modal button.close:hover {
+    background-color: #c82333;
+}
+
+/* Style for the modal content container */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

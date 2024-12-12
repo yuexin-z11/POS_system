@@ -1,0 +1,341 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    
+}
+
+.modal {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+    max-height: 95vh; 
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10vh;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.closeButton:hover {
+    color: #333;
+}
+
+.generateReportButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+}
+
+.generateReportButton:hover {
+    background-color: #45a049;
+}
+
+.restockButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+}
+  
+.restockButton:hover {
+    background-color: #0056b3; 
+}
+
+.backButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+  
+.backButton:hover {
+    background-color: darkgrey; 
+}
+  
+.reportContent {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.reportTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.reportTable th,
+.reportTable td {
+    padding: 8px 20px; 
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.reportTable th {
+    background-color: #f9f9f9; 
+    font-weight: bold;
+}
+
+.reportTable td {
+    border-bottom: 1px solid #ddd;
+}
+
+.modalAlert {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modalAlert h3 {
+    margin-bottom: 20px;
+}
+
+.closeButtonAlert {
+    background-color: #007BFF;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.closeButtonAlert:hover {
+    background-color: #0056b3;
+}
+.progressBarsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .progressBarWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .itemLabel {
+    width: 150px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .progressContainer {
+    position: relative;
+    flex: 1;
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progressBar {
+    height: 100%;
+    background-color: #4caf50;  
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .minQuantityMarker {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #ff5722;  
+  }
+  
+  .quantityInfo {
+    width: 80px;
+    text-align: right;
+  }
+
+.deleteButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+.deleteModal {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Adjust as needed */
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.deleteModal input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.deleteModal .modalButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.deleteModal .confirmDeleteButton {
+    background-color: #dc3545; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.deleteModal .confirmDeleteButton:hover {
+    background-color: #c82333;
+}
+
+.deleteModal .cancelButton {
+    background-color: #6c757d; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.deleteModal .cancelButton:hover {
+    background-color: #5a6268;
+}
+
+/* Popup overlay style */
+.popupStyle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color:black;
+}
+  
+.popupContentStyle {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    color: black;
+}
+  
+.popupContentStyle h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+  
+.popupContentStyle form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.popupContentStyle label {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #555;
+}
+  
+.popupContentStyle input {
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+  
+.popupContentStyle button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+  
+.popupContentStyle button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+}
+  
+.popupContentStyle button[type="submit"]:hover {
+    background-color: #218838;
+}
+  
+.popupContentStyle button[type="button"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+  
+.popupContentStyle button[type="button"]:hover {
+    background-color: #c82333;
+}

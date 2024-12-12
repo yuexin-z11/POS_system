@@ -1,0 +1,116 @@
+/* kitchenview.css */
+
+
+.kitchenContainer {
+    height: 100vh; /* Full viewport height */
+    background-color: #800000; /* Maroon background */
+    color: black; /* Text color */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    padding: 1rem 2rem; /* Padding: top-right-bottom-left */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  
+  .kitchenHeader {
+    font-size: 3rem; /* Header size */
+    font-weight: bold; /* Bold font */
+    padding: 1rem; /* Padding around the header */
+    text-align: center; /* Center the header text */
+    color: white; /* Set header text color to white */
+  }
+  
+  
+  .cardGrid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+    gap: 1rem; /* Space between cards */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for grid */
+    margin: 0 auto; /* Center grid within container */
+  }
+  
+  
+  .card {
+    background-color: #FFFDD0; /* Cream background for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Card shadow */
+    display: flex; /* Flexbox for card content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out items */
+    height: 390px; /* Card height */
+    width: 370px; /* Card width */
+    padding: 1rem; /* Padding around card content */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow to avoid scrollbars on card itself */
+  }
+  
+  
+  .card-content {
+    overflow-y: auto; /* Enable vertical scrolling on overflow */
+    flex-grow: 1; /* Allow this section to take up available space */
+  }
+  
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between; /* Space out the two buttons */
+    width: 100%;
+    margin-top: auto; /* Push buttons to the bottom */
+  }
+  
+  
+  .card-header {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    justify-content: space-between; /* Space elements out */
+    margin-bottom: 1rem; /* Space below the header */
+    padding: 0.5rem; /* Padding around header */
+    background-color: #FFFDD0; /* Light background color for the header */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  
+  
+  
+  /* Button styles */
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 0.5rem; /* Space between buttons */
+  }
+  
+  
+  .btn-primary {
+    background-color: #4caf50; /* Green background for 'Complete' button */
+    color: white;
+  }
+  
+  
+  .btn-secondary {
+    background-color: #ff9800; /* Orange background for 'In Progress' button */
+    color: white;
+  }
+  
+  
+  .queueBox {
+    position: fixed;
+    bottom: 1rem; /* Distance from the bottom */
+    right: 1rem; /* Distance from the right */
+    background-color: #ffeb3b; /* Yellow background */
+    color: black;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for emphasis */
+  }
+  
+  
+  
+  
+  
+  

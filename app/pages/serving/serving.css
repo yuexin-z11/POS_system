@@ -1,0 +1,75 @@
+/* Body Styling */
+body {
+    background-color: maroon; /* Set the entire page background to maroon */
+    color: white; /* Change default text color to white for better contrast */
+    margin: 0; /* Remove default browser margin */
+    font-family: Arial, sans-serif; /* Ensure consistent font styling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure the background covers the full viewport height */
+}
+
+/* Container for the Table */
+.orderStatusTableContainer {
+    overflow-x: auto;
+    margin: 2rem auto; /* Add spacing around the table */
+    max-width: 1200px; /* Increase container width */
+    background-color: white; /* Keep the container background white for contrast */
+    padding: 2rem; /* Add more padding for a larger appearance */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Table Styling */
+.orderStatusTable {
+    width: 100%; /* Make the table span the entire width of the container */
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    font-size: 1.5rem; 
+}
+
+.orderStatusTable th,
+.orderStatusTable td {
+    padding: 1.5rem; /* Increase padding for bigger table cells */
+    border: 1px solid #ddd; 
+    vertical-align: top;
+}
+
+.orderStatusTable th {
+    background-color: black; /* Black background for table headers */
+    color: white; /* White text for table headers */
+    font-size: 1.8rem; /* Increase header font size */
+}
+
+/* Row and Status Styling */
+.status-awaiting {
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.status-in-progress {
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.status-complete {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Error Message Styling */
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 1.5rem; /* Make the error message text larger */
+    margin-top: 2rem;
+}
+.subtext {
+    font-size: 12px;
+    color: white;
+}

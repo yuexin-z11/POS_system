@@ -1,0 +1,682 @@
+:root {
+    --modal-content-background: white;
+    --background-color: #800000;
+    --card-background-color: white;
+    --card-hover: rgb(232, 228, 228);
+    --card-combo-selected: #d11313;
+    --button-color-hover-one: rgba(255, 255, 255, 0.1);
+    --button-color-hover-two: #ac0808;
+    --button-hover-size: rgb(232, 228, 228);
+    --button-color-one: #800000;
+    --button-color-two: white;
+    --button-color-disabled: #ddd;
+    --filter-background-color: #f0f0f0;
+    --filter-checkbox-color: #d9534f;
+    --filter-selected: #d9534f;
+    --footer-background-color: white;
+    --text-header: white;
+    --text-color: black;
+    --text-button: white;
+    --text-button-pressed: #800000;
+    --text-button-disabled: #888;
+
+
+    --text-size-header: 3rem;
+    --text-size-main: 0.9rem;
+    --text-size-button-one: 1rem;
+    --text-size-varied-one: 1.25rem;
+    --text-size-varied-two: 1.5rem;
+    --text-size-varied-three: 2.5rem;
+}
+
+.dark-mode {
+    --modal-content-background:#E6E6E6;
+    --background-color: #2E1F1F;
+    --card-background-color: #E6E6E6;
+    --card-hover: #cdcccc;
+    --card-combo-selected: #806666;
+    --button-color-hover-one: rgba(255, 255, 255, 0.1);
+    --button-color-hover-two: #5e4444;
+    --button-hover-size: #c8c8c8;
+    --button-color-one: #2E1F1F;
+    --button-color-two: #E6E6E6;
+    --filter-background-color: #f0f0f0;
+    --filter-checkbox-color: #553b3b;
+    --filter-selected: #553b3b;
+    --footer-background-color: #E6E6E6;
+    --text-header: #E6E6E6;
+    --text-color: black;
+    --text-button: #E6E6E6;
+    --text-button-pressed: black;
+    --text-button-disabled: #888;
+}
+
+
+.large-text {
+    --text-size-header: 3.4rem;
+    --text-size-main: 1.3rem;
+    --text-size-button-one: 1.4rem;
+    --text-size-varied-one: 1.65rem;
+    --text-size-varied-two: 1.9rem;
+    --text-size-varied-three: 2.9rem;
+}
+
+
+#google_translate_element * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.textSizeToggleButton {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-color);
+    color: var(--text-button);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--text-size-button-one);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.textSizeToggleButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+.textIcon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.themeToggleButton {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-color);
+    color: var(--text-button);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--text-size-button-one);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.themeToggleButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+.themeIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.kioskContainer {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+
+.kioskHeader {
+    font-size: var(--text-size-header);
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-header);
+    margin-bottom: 2rem;
+}
+
+.kioskAPIHeader{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-header);
+    margin-bottom: 2rem;
+}
+
+.leftHeader {
+    display: flex;
+    align-items: center;
+}
+
+.rightHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mainContent {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 80px;
+}
+
+
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.menuButton {
+    padding: 1rem;
+    font-size: var(--text-size-button-one);
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: var(--text-button);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+.menuButton:hover {
+    background-color: var(--button-color-hover-one);
+}
+
+
+.menuButton.active {
+    background-color: var(--button-color-two);
+    color: var(--text-button-pressed);
+    font-weight: bold;
+}
+
+.comboButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(33.33% - 10px);
+    gap: 10px;
+    font-size: var(--text-size-varied-one);
+    text-align: center;
+    background-color: var(--button-color-two);
+    color: var(--text-button-pressed);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #666;
+    border-radius: 8px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.comboButton:hover {
+    background: rgb(232, 228, 228);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+}
+
+.comboButton img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.comboView {
+    width: 1154px;
+}
+
+.comboSteps {
+    font-size:2rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: left;
+    color: var(--text-header);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.comboName {
+    font-size: var(--text-size-varied-three);
+    font-weight: bold;
+    padding-left: 1rem;
+    text-align: left;
+    color: var(--text-header);
+    margin-top: 1rem;
+}
+
+.comboDescription {
+    font-size: var(--text-size-varied-two);
+    padding-left: 1rem;
+    text-align: left;
+    color: var(--text-header);
+    margin-bottom: 1rem;
+}
+
+
+.itemsGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+
+.menuItem {
+    background: var(--card-background-color);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+
+
+.menuItem:hover {
+    background: var(--card-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menuItem:active {
+    background: rgb(204, 197, 197);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menuItem.selected {
+    border: 7px solid var(--card-combo-selected);
+}
+
+.menuItem.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+
+.itemImage {   
+    width: 70%;
+    height: 70%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.infoItemImage {  
+    display: flex;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.infoIcon {
+    position: absolute;
+    left: 5%;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.iconWithInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.itemName {
+    font-size: var(--text-size-main);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+
+.itemPrice {
+    font-size: var(--text-size-main);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.addComboButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.addComboToOrderButton {
+    background: transparent;
+    border: none;
+    background-color: var(--button-color-two);
+    color: var(--button-color-one);
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--text-size-button-one);
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.addComboToOrderButton:hover {
+    background: var(--card-hover);
+}
+
+.addComboToOrderButton:disabled {
+    background-color: var(--button-color-disabled);
+    color: var(--text-button-disabled);
+    cursor: not-allowed;
+}
+
+
+.orderItemContainer {
+    text-align: center;
+}
+
+.orderSummaryItems {
+    display: inline-block;
+    text-align: left;
+}
+
+.orderSummaryItems li {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.orderSummaryItems li.comboItem {
+    padding-left: 1.5em;
+}
+
+.removeButton {
+    background: transparent;
+    border: none;
+    background-color: var(--background-color);
+    color: var(--text-button);
+    padding: 0.15rem 0.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--text-size-button-one);
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.removeButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--footer-background-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.totalAmount {
+    font-size: var(--text-size-varied-one);
+    font-weight: bold;
+}
+
+
+.viewOrderButton {
+    background-color: var(--button-color-one);
+    font-size: var(--text-size-button-one);
+    color: var(--text-button);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.viewOrderButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: var(--modal-content-background);
+    font-size: var(--text-size-main);
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modalContent button {
+    margin: 6px;
+}
+
+.sizeButton {
+    background-color: var(--button-color-two);
+    padding: 0.75rem 1.5rem;
+    border:#666;
+    border-radius: 8px;
+}
+
+.sizeButton:hover {
+    background: var(--button-hover-size);
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.cancelButton {
+    margin-top: 10px;
+    background-color: var(--button-color-one);
+    color: var(--text-button);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancelButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+.cashOutButton {
+    margin-top: 10px;
+    background-color: var(--button-color-one);
+    color: var(--text-button);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cashOutButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+.modalContent h3 {
+    font-size: var(--text-size-varied-two);
+    font-weight: bold;
+}
+
+.customerInput {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modalContent h4 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    font-size: var(--text-size-varied-one);
+    font-weight: bold;
+    color: var(--text-button-pressed);
+}
+
+
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.closeButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--button-color-one);
+    color: var(--text-button);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .itemsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .mainContent {
+        flex-direction: column;
+    }
+
+
+    .sidebar {
+        width: 100%;
+    }
+
+
+    .itemsGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.filterCheckbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--filter-checkbox-color);
+}
+
+.filterButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--button-color-two);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--text-size-button-one);
+    font-weight: bold;
+    position: relative;
+}
+
+.filterButton.active {
+    background-color: var(--filter-selected);
+    color: var(--text-button);
+    background-color: var(--filter-selected);
+    color: var(--text-button);
+}
+
+.filterButtonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+.ttsToggle {
+    top: 10px;
+    right: 20px;
+}
+
+
+.ttsButton {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-color);
+    color: var(--text-button);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--text-size-button-one);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.ttsButton.enabled {
+    background-color: #4caf50;
+    background-color: #4caf50;
+}
+
+.ttsButton:hover {
+    background-color: var(--button-color-hover-two);
+}
+
+.ttsIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; 
+}

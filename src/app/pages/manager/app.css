@@ -1,0 +1,65 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.top-panel, .bottom-panel, .center-panel, .right-panel {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+
+.menu-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.order-summary {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+
+.menu-button, .logout-button, .cash-out-button, .menu-item {
+    margin: 5px;
+    padding: 10px;
+}
+
+
+.menu-item-button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+
+.menu-item-button:hover {
+    background-color: #45a049; /* Darker green */
+    border-color: #45a049; /* Change border color on hover */
+}
+
+
+.center-panel {
+    padding: 20px;
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center; /* Center buttons */
+}
+
+
+
+
+

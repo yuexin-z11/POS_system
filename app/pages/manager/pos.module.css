@@ -1,0 +1,256 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 120px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: maroon;
+    padding: 20px;
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;  /* Distribute space between left and right sections */
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.employeeInfo {
+    flex: 1;
+}
+
+.reports {
+    display: flex;
+    gap: 10px;
+}
+
+.reportButton,
+.cashOutButton {
+    padding: 10px 15px;
+    background-color: #fff;
+    
+    color: maroon;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effects for report buttons */
+.reportButton:hover {
+    background-color: rgb(140, 39, 39);
+    color: #fff;
+}
+
+/* Hover effects for cash out buttons */
+.cashOutButton:hover {
+    background-color: maroon; 
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #f1f1f1;
+    gap: 20px;
+}
+
+.menuGrid {
+    flex: 3; 
+  }
+
+.orderSummary {
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.orderSummary h3 {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.99rem; 
+}
+
+.orderSummary li {
+    color: maroon;        /* Set font color to maroon */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Optional: choose a clean font */
+    font-size: 1rem;      /* Adjust font size as needed */
+    margin-bottom: 0.5rem; /* Space between items */
+}
+
+.orderSummary p {
+    color: maroon;        /* Set font color to maroon */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Optional: choose a clean font */
+    font-size: 1rem;      /* Adjust font size as needed */
+    margin-bottom: 0.5rem; /* Space between items */
+}
+
+.orders {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cashOutButtons {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gridContainer {
+    display: flex;
+    gap: 1rem; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.column {
+    flex: 1; /* Make each column take equal width */
+}
+
+.menuTypeTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: maroon; /* Set text color to maroon */
+    text-transform: uppercase; /* Capitalize the text */
+    font-weight: bold;
+}
+
+.card {
+    background-color: white; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    opacity: 1; 
+    cursor: pointer;
+    pointer-events: all;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.header h2 {
+    margin-bottom: 10px;
+    color: maroon;
+}
+
+.card h3 {
+    color: maroon; 
+    font-size: 1.2rem; 
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: maroon;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+.footer {
+    background-color: maroon;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .orderSummaryButtons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto; /* Pushes buttons to the bottom of the panel */
+    padding-top: 10px;
+  }
+  
+  .orderSummaryButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(170, 29, 29);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .orderSummaryButton:hover {
+    background-color: rgb(140, 39, 39);
+  }
+
+  .selectedEntree {
+    background-color: #f0f0f0; /* Adjust color for selected entree */
+    border: 2px solid green;
+  }
+  
+  .selectedSide {
+    background-color: #e0e0e0; /* Adjust color for selected side */
+    border: 2px solid blue;
+  }
+  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Disables click interactions */
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+  }
+  
+  .infoContainer {
+    text-align: right;  /* Align time/weather to the right */
+  }
+
+  .reportButton {
+    background-color: rgb(170, 29, 29);
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .reportButton:hover {
+    background-color: rgb(140, 39, 39);
+  }
+  

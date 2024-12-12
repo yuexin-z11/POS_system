@@ -1,0 +1,177 @@
+/* kitchenview.css */
+
+.kitchenContainer {
+  min-height: 100vh;
+  background-color: #800000; /* Maroon background */
+  color: black; /* Text color */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  padding: 1rem 2rem; /* Padding: top-right-bottom-left */
+  align-items: center; /* Center content horizontally */
+}
+
+.kitchenHeader {
+  font-size: 3rem; /* Header size */
+  font-weight: bold; /* Bold font */
+  padding: 1rem; /* Padding around the header */
+  text-align: center; /* Center the header text */
+  color: white; /* Set header text color to white */
+}
+
+.cardGrid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+  gap: 1rem; /* Space between cards */
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Maximum width for grid */
+  margin: 0 auto; /* Center grid within container */
+}
+
+.card {
+  background-color: #FFFDD0; /* Default cream background for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Card shadow */
+  display: flex; /* Flexbox for card content */
+  flex-direction: column; /* Stack vertically */
+  justify-content: space-between; /* Space out items */
+  height: 390px; 
+  width: 370px; 
+  padding: 1rem; 
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow to avoid scrollbars on card itself */
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.card.in-progress {
+  background-color: navy; /* Navy background when In Progress */
+  color: white; /* White text when In Progress */
+}
+
+.card-content {
+  overflow-y: auto; /* Enable vertical scrolling on overflow */
+  flex-grow: 1; 
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between; /* Space out the two buttons */
+  width: 100%;
+  margin-top: auto; /* Push buttons to the bottom */
+}
+
+.card-header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; /* Push items to opposite ends of the header */
+  margin-bottom: 1rem; /* Space below the header */
+  padding: 0.5rem; /* Padding around header */
+  background-color: #FFFDD0; 
+  border: 2px solid black; /* Black border around the header */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.card.in-progress .card-header {
+  background-color: navy; /* Navy background for header when In Progress */
+  color: white; /* White text in the header */
+  border: 2px solid black; /* Black border around the header in In Progress state */
+}
+
+/* Timer Section */
+.card-timer {
+  margin-top: 1rem; /* Makes sure it is below the header content */
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ff4500; /* Red for timer text */
+  text-align: center;
+  animation: none; 
+}
+
+.card.timer-expired .card-timer {
+  animation: flash-red 1s infinite; /* Flashing red effect when expired */
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 0.5rem; 
+}
+
+/* Primary Button (Complete) */
+.btn-primary {
+  background-color: #4caf50; /* Green background for Complete button */
+  color: white;
+  border: 1px solid black;
+}
+
+.btn-primary:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Secondary Button (In Progress) */
+.btn-secondary {
+  background-color: #ff9800; /* Orange background for In Progress button */
+  color: white;
+  border: 1px solid black;
+}
+
+.btn-secondary:hover {
+  background-color: #fb8c00; /* Slightly darker orange on hover */
+}
+
+/* Start Timer Button */
+.btn-timer {
+  background-color: #50c878; /* Emerald green */
+  color: white;
+  border: 1px solid black; 
+  padding: 0.3rem 0.6rem; 
+  font-size: 0.8rem; 
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-left: auto; /* Push the button to the far right */
+  align-self: center; /* Center vertically within the header */
+}
+
+.btn-timer:hover {
+  background-color: #3cb371; /* Darker emerald green on hover */
+  color: white;
+}
+
+/* Timer Expired Flash Effect */
+@keyframes flash-red {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+}
+
+.queueBox {
+  position: fixed;
+  bottom: 1rem; /* Distance from the bottom */
+  right: 1rem; /* Distance from the right */
+  background-color: #ffeb3b; 
+  color: black;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Placeholder card content */
+.card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #ccc; /* Light gray for placeholder text */
+  height: 100%; 
+  text-align: center;
+}
